@@ -9,7 +9,7 @@ import lombok.ToString;
 @EqualsAndHashCode
 @Getter
 public class Department {
-    private String departmentId;
+    private final String departmentId;
     @Setter private String departmentName;
     private static int nextId = 1;
 
