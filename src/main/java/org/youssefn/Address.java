@@ -28,16 +28,16 @@ public class Address {
         String letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
         String digits = "1234567890";
 
-        for (int i = 0; i <= postalCode.length(); i++) {
+        for (int i = 0; i < postalCode.length(); i++) {
             char currentChar = postalCode.charAt(i);
             String charString = String.valueOf(currentChar);
             if (i % 2 == 0) {
-                if (letters.contains(charString)) {
+                if (!letters.contains(charString)) {
                     return false;
                 }
             }
             else {
-                if (digits.contains(charString))
+                if (!digits.contains(charString))
                     return false;
                 }
             }
@@ -72,7 +72,7 @@ public class Address {
                 ", street='" + street + '\'' +
                 ", city='" + city + '\'' +
                 ", province=" + province +
-                ", postalCode='" + postalCode.toUpperCase() + '\'' +
+                ", postalCode='" + postalCode + '\'' +
                 '}';
     }
 }

@@ -1,5 +1,6 @@
 package org.youssefn;
 
+import Util.Util;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
@@ -47,5 +48,10 @@ public class Department {
             this.departmentName = departmentName;
             this.departmentId = generateNewId();
         }
+    }
+
+    public Department(String departmentId, String departmentName) {
+        this.departmentId = departmentId;
+        this.departmentName = Util.toTitleCase(departmentName);
     }
 }

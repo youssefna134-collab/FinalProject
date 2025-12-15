@@ -5,9 +5,10 @@ import java.util.List;
 import java.util.Random;
 
 public class Assignment {
+    public String name;
     private String assignmentId;
     private String assignmentName;
-    private double weight;
+    double weight;
     private List<Integer> scores;
     private static int nextId = 1;
 
